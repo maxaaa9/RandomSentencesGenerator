@@ -1,5 +1,7 @@
 import random
 
+from colorama import Fore, Back, Style, init
+
 
 def randomizer(word: list) -> str:
     return random.choice(word)
@@ -41,5 +43,6 @@ while True:
     random_adverbs = randomizer(adverbs)
     random_details = randomizer(details)
 
-    print(f"{random_name} from {random_places} {random_adverbs} {random_verbs} {random_nouns}.")
-    input("Click [Enter] button to generate a new one.")
+    print(Fore.BLACK + Back.WHITE + Style.BRIGHT + f"{random_name} from {random_places} "
+                                                   f"{random_adverbs} {random_verbs} {random_nouns}.\n")
+    input("Click [Enter] button to generate a new one.\n")
